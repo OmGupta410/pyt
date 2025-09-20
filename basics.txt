@@ -1,0 +1,99 @@
+# Writing to a file
+with open("sample.txt", "w") as f:
+    f.write("Hello, this is the first line.\n")
+    f.write("This is the second line.\n")
+
+# Appending to a file
+with open("sample.txt", "a") as f:
+    f.write("This line is appended at the end.\n")
+
+# Reading the entire file
+with open("sample.txt", "r") as f:
+    content = f.read()
+    print("=== File Content ===")
+    print(content)
+
+# Reading line by line
+with open("sample.txt", "r") as f:
+    print("=== Reading line by line ===")
+    for line in f:
+        print(line.strip())  # strip() removes newline
+
+
+
+
+import json
+
+# Data to store
+car_data = {
+    "id": 1,
+    "brand": "Toyota",
+    "model": "Innova",
+    "price": 1500000,
+    "fuel": "Diesel"
+}
+
+# Writing JSON to file
+with open("car.json", "w") as f:
+    json.dump(car_data, f, indent=4)   # indent=4 makes it pretty
+
+print("JSON file written successfully!")
+
+# Reading JSON from file
+with open("car.json", "r") as f:
+    data = json.load(f)
+
+print("=== JSON File Content ===")
+print(data)
+
+
+CSV File Handling
+
+import csv
+
+# List of cars
+cars = [
+    ["ID", "Brand", "Model", "Price", "Fuel"],
+    [1, "Toyota", "Innova", 1500000, "Diesel"],
+    [2, "Hyundai", "Creta", 1200000, "Petrol"],
+    [3, "Tata", "Nexon EV", 1700000, "Electric"]
+]
+
+# Writing CSV
+with open("cars.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerows(cars)
+
+print("CSV file written successfully!")
+
+# Reading CSV
+with open("cars.csv", "r") as f:
+    reader = csv.reader(f)
+    print("=== CSV File Content ===")
+    for row in reader:
+        print(row)
+
+
+import csv
+
+# List of cars
+cars = [
+    ["ID", "Brand", "Model", "Price", "Fuel"],
+    [1, "Toyota", "Innova", 1500000, "Diesel"],
+    [2, "Hyundai", "Creta", 1200000, "Petrol"],
+    [3, "Tata", "Nexon EV", 1700000, "Electric"]
+]
+
+# Writing CSV
+with open("cars.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerows(cars)
+
+print("CSV file written successfully!")
+
+# Reading CSV
+with open("cars.csv", "r") as f:
+    reader = csv.reader(f)
+    print("=== CSV File Content ===")
+    for row in reader:
+        print(row)
