@@ -97,3 +97,92 @@ with open("cars.csv", "r") as f:
     print("=== CSV File Content ===")
     for row in reader:
         print(row)
+
+
+
+
+1. Variables & Data Types
+- int, float, complex
+- str (immutable): upper(), lower(), title(), capitalize(), swapcase(), find(), index(), startswith(), endswith(), replace(), strip(), split(), jo- bool: True, False
+- NoneType: None
+
+
+2. Operators
+Arithmetic: + - * / % // **
+Comparison: == != > < >= <=
+Logical: and, or, not
+Assignment: = += -= *= /=
+Membership: in, not in
+Identity: is, is not
+Bitwise: & | ^ ~ << >>
+
+
+3. Control Flow
+if/elif/else
+for i in range(n), while cond
+break, continue, pass
+
+
+4. Collections
+List: append(), insert(), extend(), remove(), pop(), clear(), index(), count(), sort(), reverse(), copy()
+Tuple: count(), index()
+Set: add(), remove(), discard(), pop(), union(), intersection(), difference(), symmetric_difference(), issubset(), issuperset()
+Dict: get(), keys(), values(), items(), update(), pop(), popitem(), clear(), copy()
+
+
+
+5. Functions
+def f(...): return
+Built-ins: len(), min(), max(), sum(), sorted(), reversed(), enumerate(), zip(), map(), filter(), any(), all(), range()
+Lambda: lambda x: x**2
+
+
+6. Modules & Packages
+import math, random, datetime, os, sys
+math: sqrt(), ceil(), floor(), pi
+random: randint(), choice(), shuffle()
+datetime: datetime.now(), strftime(), strptime()
+os: getcwd(), listdir(), mkdir(), remove()
+sys: argv, exit
+
+
+7. File Handling
+open(filename, mode)
+Modes: r, w, a, rb, wb
+with open("f.txt","w") as f: f.write("txt")
+with open("f.txt","r") as f: f.read()
+8. Exception Handling
+try/except/else/finally
+except Exception as e
+
+
+9. OOP
+class Person: __init__, methods
+Inheritance: class Student(Person)
+Encapsulation: _protected, __private
+Polymorphism: method overriding
+
+
+10. Advanced Tools
+List comprehensions: [x**2 for x in range(5)]
+Dict comprehensions: {x:x**2 for x in range(5)}
+Generator: (x**2 for x in range(5))
+yield keyword
+Decorators: @deco
+
+
+
+11. Libraries to Know
+json: dumps(), loads()
+re: match(), findall(), sub()
+collections: Counter, defaultdict, OrderedDict, deque
+itertools: product, permutations, combinations, chain
+
+
+
+12. Virtualenv & Pip
+python -m venv env
+source env/bin/activate (Linux/Mac)
+env\Scripts\activate (Windows)
+pip install package
+pip freeze > requirements.txt
